@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "OmniReserve.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/OmniReserve.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OmniReserve.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OmniReserve.Domain/1.0.0": {
+      "type": "project",
+      "path": "../OmniReserve.Domain/OmniReserve.Domain.csproj",
+      "msbuildProject": "../OmniReserve.Domain/OmniReserve.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "OmniReserve.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\cebal\\.nuget\\packages\\": {},
@@ -14,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cebal\\OneDrive\\Documentos\\SEPTIMO SEMESTRE\\Aplicación de Base de datos\\OmniReserve\\OmniReserve.Infrastructure\\OmniReserve.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Infrastructure\\OmniReserve.Infrastructure.csproj",
       "projectName": "OmniReserve.Infrastructure",
-      "projectPath": "C:\\Users\\cebal\\OneDrive\\Documentos\\SEPTIMO SEMESTRE\\Aplicación de Base de datos\\OmniReserve\\OmniReserve.Infrastructure\\OmniReserve.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Infrastructure\\OmniReserve.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\cebal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cebal\\OneDrive\\Documentos\\SEPTIMO SEMESTRE\\Aplicación de Base de datos\\OmniReserve\\OmniReserve.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,7 +58,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj": {
+              "projectPath": "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

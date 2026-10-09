@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cebal\\OneDrive\\Documentos\\SEPTIMO SEMESTRE\\Aplicación de Base de datos\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj": {}
+    "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cebal\\OneDrive\\Documentos\\SEPTIMO SEMESTRE\\Aplicación de Base de datos\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj": {
+    "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cebal\\OneDrive\\Documentos\\SEPTIMO SEMESTRE\\Aplicación de Base de datos\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj",
         "projectName": "OmniReserve.Domain",
-        "projectPath": "C:\\Users\\cebal\\OneDrive\\Documentos\\SEPTIMO SEMESTRE\\Aplicación de Base de datos\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj",
+        "projectPath": "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Domain\\OmniReserve.Domain.csproj",
         "packagesPath": "C:\\Users\\cebal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cebal\\OneDrive\\Documentos\\SEPTIMO SEMESTRE\\Aplicación de Base de datos\\OmniReserve\\OmniReserve.Domain\\obj\\",
+        "outputPath": "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
