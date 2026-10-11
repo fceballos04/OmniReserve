@@ -1,4 +1,4 @@
-sing MediatR;
+using MediatR;
 using OmniReserve.Domain.Enums;
 
 namespace OmniReserve.Application.Rooms.Commands.CreateRoom;
