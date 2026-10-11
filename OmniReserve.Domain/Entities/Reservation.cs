@@ -16,7 +16,7 @@ public class Reservation
     public Reservation(Guid userId, Guid roomId, DateTime checkInDate, DateTime checkOutDate, decimal totalPrice)
     {
         if (checkInDate >= checkOutDate)
-            throw new ArgumentException("La fecha de check-in debe ser anterior a la de check-out.");
+            throw new InvalidReservationDatesException();
 
         Id = Guid.NewGuid();
         UserId = userId;

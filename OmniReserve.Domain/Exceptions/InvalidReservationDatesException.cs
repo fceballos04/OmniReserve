@@ -3,7 +3,7 @@ namespace OmniReserve.Domain.Exceptions;
 public class InvalidReservationDatesException : DomainException
 {
     public InvalidReservationDatesException() 
-        : base("La fecha de Check-out no puede ser la misma o antes que la fecha de Check-in.")
+        : base("La fecha de Check-out debe ser posterior a la fecha de Check-in.")
     {
     }
 }
