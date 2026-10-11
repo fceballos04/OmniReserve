@@ -1,4 +1,5 @@
 using OmniReserve.Domain.Enums;
+using OmniReserve.Domain.Exceptions;
 
 namespace OmniReserve.Domain.Entities;
 
