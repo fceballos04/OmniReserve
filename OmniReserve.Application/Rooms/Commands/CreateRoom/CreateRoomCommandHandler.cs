@@ -9,5 +9,10 @@ public class CreateRoomCommandHandler : IRequestHandler<CreateRoomCommand, Guid>
     {
         // Se instancia la entidad de dominio con las reglas dictadas en el constructor
         var room = new Room(request.RoomNumber, request.Type, request.PricePerNight);
+        
+        // Simulación: aquí se guardaría en base de datos.
+        
+        // Se retorna el Guid
+        return Task.FromResult(room.Id);
     }
 }
