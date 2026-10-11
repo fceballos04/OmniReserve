@@ -6,10 +6,15 @@ public class GetRoomByIdQueryHandler : IRequestHandler<GetRoomByIdQuery, RoomRes
 {
     public Task<RoomResponseDto> Handle(GetRoomByIdQuery request, CancellationToken cancellationToken)
     {
+        // Se simula la recuperación desde la base de datos transformándolo inmediatamente a DTO
         var response = new RoomResponseDto(
             request.RoomId, 
+            "101", 
+            "Single", 
+            150.00m, 
+            true
         );
 
-        return Task.FromResult();
+        return Task.FromResult(response);
     }
 }
