@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
+using OmniReserve.Application.Common.Behaviors;
 using System.Reflection;
 
 namespace OmniReserve.Application;
