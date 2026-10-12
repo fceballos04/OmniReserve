@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Ue8XiOaqzlc=",
+  "dgSpecHash": "FJy6RcmdSdU=",
   "success": true,
   "projectFilePath": "C:\\Users\\cebal\\OneDrive\\Desktop\\OmniReserve\\OmniReserve.Api\\OmniReserve.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\cebal\\.nuget\\packages\\fluentvalidation\\12.2.0\\fluentvalidation.12.2.0.nupkg.sha512",
+    "C:\\Users\\cebal\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.2.0\\fluentvalidation.dependencyinjectionextensions.12.2.0.nupkg.sha512",
     "C:\\Users\\cebal\\.nuget\\packages\\mediatr\\14.2.0\\mediatr.14.2.0.nupkg.sha512",
     "C:\\Users\\cebal\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\cebal\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
