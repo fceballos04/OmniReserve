@@ -7,15 +7,14 @@ public class User
     public Guid Id { get; private set; }
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
-    public string Email { get; private set; }
+    public EmailAddress Email { get; private set; }
     public string PasswordHash { get; private set; }
     public Role Role { get; private set; }
-
+    
     // Propiedad de Navegación de Colección
     public ICollection<Reservation> Reservations { get; private set; } = new List<Reservation>();
 
-
-    public User(string firstName, string lastName, string email, string passwordHash, Role role)
+    public User(string firstName, string lastName, EmailAddress email, string passwordHash, Role role)
     {
         if (string.IsNullOrWhiteSpace(firstName)) throw new ArgumentNullException(nameof(firstName));
         if (string.IsNullOrWhiteSpace(lastName)) throw new ArgumentNullException(nameof(lastName));
