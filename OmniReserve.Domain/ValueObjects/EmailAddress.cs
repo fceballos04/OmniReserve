@@ -1,11 +1,13 @@
 namespace OmniReserve.Domain.ValueObjects;
 
-public class EmailAddress
+// Obligatorio el uso de record para garantizar igualdad estructural e inmutabilidad
+public record EmailAddress
 {
     public string Value { get; }
 
     public EmailAddress(string value)
     {
+        // Reglas de autovalidación de negocio
         if (string.IsNullOrWhiteSpace(value))
         {
             throw new ArgumentException("El email no puede estar vacío.");
@@ -18,4 +20,7 @@ public class EmailAddress
 
         Value = value;
     }
+
+    // Opcional: Sobrescribir ToString para facilitar la lectura en consola
+    public override string ToString() => Value;
 }
