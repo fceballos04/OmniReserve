@@ -14,14 +14,19 @@ public class GetRoomByIdQueryHandler : IRequestHandler<GetRoomByIdQuery, RoomRes
 
     public async Task<RoomResponseDto> Handle(GetRoomByIdQuery request, CancellationToken cancellationToken)
     {
+        // 1. Buscar en Repositorio
         var room = await _roomRepository.GetByIdAsync(request.RoomId);
         
         if (room is null)
             throw new Exception("Habitación no encontrada");
 
+        // 2. Mapear a DTO (Ocultar Entidad)
         var response = new RoomResponseDto(
             room.Id, 
             room.RoomNumber, 
+            room.Type.ToString(), 
+            room.PricePerNight, 
+            room.IsAvailable
         );
 
         return response;
