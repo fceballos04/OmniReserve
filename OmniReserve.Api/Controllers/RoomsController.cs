@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using OmniReserve.Application.Rooms.Commands.CreateRoom;
+using OmniReserve.Application.Rooms.Queries.GetRoomById;
 
 namespace OmniReserve.Api.Controllers;
 
@@ -23,5 +24,15 @@ public class RoomsController : ControllerBase
 
         // Se retorna HTTP 200 OK incluyendo la data en formato JSON automáticamente
         return Ok(roomId);
+    }
+
+    [HttpGet("{id}")]
+    public async Tasks<IActionResult> GetRooms(Guid id)
+    {
+        var querys = new GetRoomByIdQuery { RoomId = id };
+        
+        var results = await _sender.Send(querys);
+        
+        return Ok(results);
     }
 }
