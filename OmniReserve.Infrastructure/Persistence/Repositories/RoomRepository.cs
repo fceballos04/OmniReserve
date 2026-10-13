@@ -34,4 +34,10 @@ public class RoomRepository : IRoomRepository
         return await _context.Rooms
             .FirstOrDefaultAsync(r => r.RoomNumber == roomNumber);
     }
+
+    public async Task<List<Room>> GetRoomsByTypeRawAsync(string roomType)
+    {
+                return await _context.Rooms
+
+    }
 }
