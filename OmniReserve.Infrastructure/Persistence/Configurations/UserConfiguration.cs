@@ -15,10 +15,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 
         builder.Property(u => u.Email)
             .HasConversion(
-               emailObj => emailObj.Value, 
-               emailStr => new EmailAddress(emailStr) 
+               emailObj => emailObj.Value, // Cómo grabar (C# a SQL) 
+               emailStr => new EmailAddress(emailStr) // Cómo leer (SQL a C#) 
            )
-            .HasColumnName("Email")
+            .HasColumnName("Email") // Fuerza el nombre de la columna en la BD
             .HasMaxLength(255)
             .IsRequired();
         
@@ -29,6 +29,10 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(u => u.LastName)
             .IsRequired()
             .HasMaxLength(50);
+
+        // Opcional recomendado: El email debe ser único en la BD
+        builder.HasIndex(user => user.Email)
+               .IsUnique();
             
     }
 }
