@@ -52,6 +52,7 @@ public class GlobalExceptionHandlingMiddleware
             return;
         }
 
+        // Interceptando Errores Puros del Negocio
         else if (exception is DomainException domainException)
         {
             var domainProblem = new ProblemDetails
@@ -61,6 +62,9 @@ public class GlobalExceptionHandlingMiddleware
                 Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1",
                 Detail = domainException.Message // Aquí se expone el mensaje "privado" diseñado en la entidad
             };
+
+            context.Response.ContentType = "application/problem+json";
+            context.Response.StatusCode = StatusCodes.Status400BadRequest;
             
             await context.Response.WriteAsync(JsonSerializer.Serialize(domainProblem));
             return;
