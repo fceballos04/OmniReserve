@@ -6,5 +6,6 @@ public interface IRoomRepository
 {
     Task AddAsync(Room room);
     
+    // Nueva firma
     Task<Room?> SearchByNumberAsync(string roomNumber);
 }
