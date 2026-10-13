@@ -27,4 +27,9 @@ public class RoomRepository : IRoomRepository
         // Se conecta a PostgreSQL para obtener o retornar nulo
         return await _context.Rooms.FirstOrDefaultAsync(r => r.Id == id);
     }
+
+    public async Task<Room?> SearchByNumberAsync(string roomNumber)
+    {
+        return await _context.Rooms
+    }
 }
