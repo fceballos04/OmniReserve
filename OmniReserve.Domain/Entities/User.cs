@@ -10,7 +10,8 @@ public class User
     public string Email { get; private set; }
     public string PasswordHash { get; private set; }
     public Role Role { get; private set; }
-    
+
+    // Propiedad de Navegación de Colección
     public ICollection<Reservation> Reservations { get; private set; } = new List<Reservation>();
 
 

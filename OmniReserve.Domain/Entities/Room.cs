@@ -10,6 +10,7 @@ public class Room
     public decimal PricePerNight { get; private set; }
     public bool IsAvailable { get; private set; }
 
+    // Propiedad de Navegación de Colección
     public ICollection<Reservation> Reservations { get; private set; } = new List<Reservation>();
 
 
