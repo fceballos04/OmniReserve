@@ -37,7 +37,13 @@ public class RoomRepository : IRoomRepository
 
     public async Task<List<Room>> GetRoomsByTypeRawAsync(string roomType)
     {
-                return await _context.Rooms
+        // 100% Seguro.
+        // La sintaxis Interpolada ($"") en FromSql es desarmada por el compilador de C# 
+        // y enviada a la DB como "SELECT * FROM \"Rooms\" WHERE \"Type\" = @p0"
+        
+        return await _context.Rooms
+            .FromSql($"SELECT * FROM \"Rooms\" WHERE \"Type\" = {roomType}")
+            .ToListAsync();
 
     }
 }
