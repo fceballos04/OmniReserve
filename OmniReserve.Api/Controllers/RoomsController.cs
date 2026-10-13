@@ -26,13 +26,14 @@ public class RoomsController : ControllerBase
         return Ok(roomId);
     }
 
-    [HttpGet("{id}")]
-    public async Tasks<IActionResult> GetRooms(Guid id)
+[HttpGet("{id}")]
+    public async Task<IActionResult> GetRoom(Guid id)
     {
-        var querys = new GetRoomByIdQuery { RoomId = id };
+        // Se debe instanciar explícitamente el Query llenando sus propiedades
+        var query = new GetRoomByIdQuery { RoomId = id };
         
-        var results = await _sender.Send(querys);
+        var result = await _sender.Send(query);
         
-        return Ok(results);
+        return Ok(result);
     }
 }
