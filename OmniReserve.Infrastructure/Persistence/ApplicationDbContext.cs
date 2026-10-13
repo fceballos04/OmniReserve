@@ -11,10 +11,12 @@ public class ApplicationDbContext : DbContext
     {
     }
 
-    public DbSet<Room> rooms { get; set; }
+    public DbSet<Room> Rooms { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // Aplica mágicamente la clase RoomConfiguration sin tener que instanciarla
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
         base.OnModelCreating(modelBuilder);
     }
