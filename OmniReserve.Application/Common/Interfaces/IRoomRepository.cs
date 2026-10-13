@@ -8,4 +8,6 @@ public interface IRoomRepository
     
     // Nueva firma
     Task<Room?> SearchByNumberAsync(string roomNumber);
+    Task<List<Room>> GetRoomsByTypeRawAsync(string roomType);
+
 }
